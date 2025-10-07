@@ -1,0 +1,32 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Entrada de datos
+        Console.Write("Ingrese un número natural: ");
+        int numero = int.Parse(Console.ReadLine());
+
+        // Llamamos al método factorial
+        long resultado = Factorial(numero);
+
+        // Mostramos el resultado
+        Console.WriteLine($"\nEl factorial de {numero} es: {resultado}");
+
+        Console.ReadKey();
+    }
+
+    // Método que calcula el factorial de un número
+    static long Factorial(int n)
+    {
+        long resultado = 1;
+
+        for (int i = 1; i <= n; i++)
+        {
+            resultado *= i;
+        }
+
+        return resultado; // Retorna el resultado al Main
+    }
+}
